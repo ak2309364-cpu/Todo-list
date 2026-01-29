@@ -23,6 +23,7 @@ function renderTasks(){
                 tasksBox.insertAdjacentHTML('afterbegin',html)
                 
     })
+        updateRemainsTasks();
     };
 
     function updateRemainsTasks(){
@@ -30,6 +31,7 @@ function renderTasks(){
     }
 
 addButton.addEventListener('click', function(e){
+    e.preventDefault();
     if(input.value.trim() !== ''){
         tasks.push(input.value);
         input.value = '';

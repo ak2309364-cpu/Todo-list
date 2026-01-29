@@ -1,6 +1,8 @@
 :root{
-    --primary-color-grey:#404040;
-    --primary-color-dark:#333333;
+    --primary-color-grey:#666666;
+    --primary-color-dark:#404040;
+    --primary-color-100:#e6e6e6;
+    --primary-color-500:#333333
 }
 *{
     padding: 0px;
@@ -9,7 +11,9 @@
 }
 body{
     margin: 0px auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+    background-color: #d9d9d9;
+   
    
 }
 .todo{
@@ -17,31 +21,35 @@ body{
    display: flex;
     flex-direction: column;
     /* align-items: center; */
-    height:100vh;
+    height:620px;
     max-width: 500px;
     min-width: 200px;
     padding: 10px 20px;
     margin: 10px auto;
-    
+    background-color: var(--primary-color-100);
+ 
 
 }
 .input-box{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6px;
-   
-
-    
+    gap: 6px;   
+    margin-top: 8px;
 }
 input[type="text"]{
-    width: 600px;
+    width: 100%;
     border: none;
-    border-bottom:  2px solid black;
+    border-bottom:  2px solid var(--primary-color-grey);
     font-size: large;
-    padding-top: 10px;
-    
-    
+    padding: 8px;
+    outline: none;
+    text-transform:capitalize;
+    border-radius: 8px;
+    color: var(--primary-color-dark);
+}
+.tasks-box{
+    overflow: auto;
 }
 .task-item{
     display: grid;  
@@ -51,8 +59,9 @@ input[type="text"]{
     margin-top: 15px;
     border-radius: 8px;
     padding: 6px;
-    overflow: hidden;
-    
+    text-transform: capitalize;
+    color:var(--primary-color-dark);
+    font-weight: 600;
 }
 .btn{
     color:var(--primary-color-dark);
@@ -62,21 +71,34 @@ input[type="text"]{
     font-size: 25px; 
     border-radius: 8px;
     cursor: pointer;
+    
 }
 .btn-add{
     color: white;
-    padding:  4px;
+    padding:  6px;
     background-color:var(--primary-color-dark);
     border: none;
 }
 .btn-delete{
     border: none;
-    background-color: white;
+    background-color: var(--primary-color-100);
+    font-size: 26px;
+    
+    
 }
 .footer{
     margin-top: auto;
 }
-.remains-task{
+.remain-tasks{
     font-weight: 800;
     
+}
+.footer{
+    color: var(--primary-color-dark);
+}
+.btn-delete:hover{
+    color: black;
+}
+.btn-add:hover{
+    background-color:var(--primary-color-500);
 }
